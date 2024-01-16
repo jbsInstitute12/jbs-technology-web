@@ -1,0 +1,88 @@
+.loader {
+    font-size: 48px;
+    color:#D46615;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+
+.loader:before {
+    content: '';
+    animation: 5s print linear alternate infinite;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translatey(-45%);
+    width: 2px;
+    height: 1.3em;
+    background: currentColor;
+    opacity: 0.8;
+    animation: 1s blink steps(2) infinite;
+}
+
+@keyframes blink {
+    0% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes print {
+    0% {
+        content: 'J';
+    }
+
+    10% {
+        content: 'JB';
+    }
+
+    20% {
+        content: 'JBS';
+    }
+
+    30% {
+        content: 'JBS ';
+    }
+
+    40% {
+        content: 'JBS T';
+    }
+
+    50% {
+        content: 'JBS TE';
+    }
+
+    60% {
+        content: 'JBS TEC';
+    }
+
+    70% {
+        content: 'JBS TECH';
+    }
+
+    80% {
+        content: 'JBS TECHNO';
+    }
+
+    90%,
+    100% {
+        content: 'JBS TECHNOLOGY';
+    }
+}
+
+.main-loader {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
